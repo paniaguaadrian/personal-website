@@ -1,0 +1,487 @@
+/* COLORS 
+
+Background color: #484d5c 
+Headline color: #ffce00 
+Body color: #c0ccd4
+
+*/
+
+/* GENERAL **********+***************** */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 100%;
+  background-color: #484d5c;
+}
+
+body {
+  /* padding: 0; */
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: "Oswald", sans-serif;
+  color: #ffce00;
+}
+
+h2 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #ffce00;
+}
+
+h3 {
+  font-family: "Oswald-bold", sans-serif;
+  font-size: 2.5rem;
+  color: #484d5c;
+  text-transform: uppercase;
+}
+
+h4,
+h5,
+h6 {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: #c0ccd4;
+}
+
+p {
+  font-family: "Cardo", serif;
+  color: #c0ccd4;
+}
+
+hr {
+  background-color: transparent;
+  border-top-style: solid;
+  border-color: #484d5c;
+  border-right-style: none;
+  border-bottom-style: none;
+  border-left-style: none;
+  border-top-width: 0.3rem;
+  width: 50rem;
+}
+
+/* HEADER MENU ******************* */
+
+.navigation-header {
+  padding: 0.5rem;
+  padding-top: 0;
+  margin-top: 0.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1rem;
+  position: relative;
+  height: 5rem;
+}
+
+.header--name__container {
+  position: absolute;
+  padding-left: 2.5rem;
+  padding-top: 0.5rem;
+
+  animation: moveInTop 1s ease-out 1s;
+  animation-fill-mode: backwards;
+
+}
+
+.header--name__sub {
+  font-family: "Oswald", serif;
+  color: #c0ccd4;
+  text-transform: uppercase;
+  padding-left: 0;
+  font-size: 0.8rem;
+
+  animation: moveInTop 1s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+
+.header--menu__container {
+  position: absolute;
+  right: 5%;
+  top: 5%;
+  padding-top: 0.5rem;
+}
+
+.header--menu__content {
+  position: absolute;
+  width: 100%;
+  height: 15rem;
+  padding-top: 1.8rem;
+
+  animation: moveInTop 1s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+li {
+  display: inline-block;
+  margin-left: 7rem;
+}
+
+.header--menu__sub {
+  font-family: "Oswald", serif;
+  color: #c0ccd4;
+  text-transform: uppercase;
+  padding-left: 1.1rem;
+  font-size: 0.8rem;
+
+  animation: moveInTop 1s ease-out .75s;
+  animation-fill-mode: backwards;
+}
+
+/* PRESENTATION ************************* */
+
+.helloworld--container {
+  width: 100%;
+  height: 35rem;
+  background-color: #484d5c;
+
+
+}
+
+.helloworld--container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+  margin-bottom: 4rem;
+}
+
+.helloworld--container__left {
+  grid-area: 1 / 1 / 5 / 3;
+  padding-left: 12rem;
+  padding-top: 2.5rem;
+}
+
+.helloworld--text {
+  font-size: 15rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  line-height: 0.9;
+  text-shadow: 6px 4px 3px rgba(0, 0, 0, 0.418);
+
+  animation: moveInRight 1s ease-out 1.5s;
+  animation-fill-mode: backwards;
+}
+
+.helloworld--container__right {
+  grid-area: 1 / 5 / 6 / 8;
+  padding-top: 5rem;
+}
+
+.helloworld--bio {
+  font-size: 1.5rem;
+  text-align: center;
+
+  animation: moveInCenter 1s ease-out 1.5s;
+  animation-fill-mode: backwards;
+}
+
+/* RECENT PROJECTS *********************** */
+
+.projects--container {
+  background-color: #ffce00;
+  width: 100%;
+  height: 55rem;
+
+  animation: moveInTop 1s ease-out 1s;
+  animation-fill-mode: backwards;
+}
+
+.projects--container {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0rem;
+  grid-row-gap: 0rem;
+}
+
+.projects--text-container {
+  grid-area: 1 / 2 / 2 / 4;
+  padding-top: 2rem;
+}
+
+.aptitude--text__front {
+  color: #ffce00;
+  padding-top: 10rem;
+  text-align: left;
+  font-size: 1.6rem;
+  font-family: "Oswald-bold", sans-serif;
+  padding-left: 1rem;
+  text-transform: uppercase;
+  z-index: -5;
+}
+
+.aptitude--subtext__front {
+  color: #c0ccd4;
+  text-align: justify;
+  font-size: 0.8rem;
+  margin-right: 1rem;
+  font-family: "Cardo", serif;
+  line-height: 1.3;
+  display: block;
+}
+
+.project--top__left {
+  grid-area: 3 / 2 / 6 / 5;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.753),
+      rgba(17, 14, 16, 0.781)),
+    url(/images/gamestry_project.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 16px 16px 32px #484d5c, -16px -16px 32px;
+  transition: 0.4s;
+}
+
+.project--top__right {
+  grid-area: 3 / 7 / 6 / 10;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.753),
+      rgba(17, 14, 16, 0.781)),
+    url(/images/gamestry_project.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 16px 16px 32px #484d5c, -16px -16px 32px;
+  transition: 0.4s;
+}
+
+.project--bottom__left {
+  grid-area: 7 / 2 / 10 / 5;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.753),
+      rgba(17, 14, 16, 0.781)),
+    url(/images/catarres_project.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 16px 16px 32px #484d5c, -16px -16px 32px;
+  transition: 0.4s;
+}
+
+.project--bottom__right {
+  grid-area: 7 / 7 / 10 / 10;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.753),
+      rgba(17, 14, 16, 0.781)),
+    url(/images/contenteditor_project.jpg);
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  border-radius: 1rem;
+  box-shadow: 16px 16px 32px #484d5c, -16px -16px 32px;
+  transition: 0.4s;
+}
+
+/* CONTACT AT BOTTOM ******************* */
+
+.contact--container__bottom {
+  width: 100%;
+  height: 15rem;
+}
+
+.contacts--first__text {
+  font-family: "Oswald", sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  padding-left: 8rem;
+  padding-top: 2rem;
+}
+
+.contact--email__text {
+  padding-bottom: 2rem;
+}
+
+.contact--name__bottom {
+  font-size: 1.5rem;
+  font-family: "Oswald", sans-serif;
+  color: #ffce00;
+  text-transform: uppercase;
+  float: right;
+  text-align: right;
+  padding-right: 2rem;
+  padding-bottom: 1rem;
+}
+
+.contact--name__subbottom {
+  font-size: 1rem;
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  display: block;
+  text-align: right;
+  color: #c0ccd4;
+}
+
+/* Links and btns ************************ */
+
+.header--name__link {
+  text-decoration: none;
+  font-size: 1.5rem;
+  text-align: center;
+  color: #ffce00;
+  font-family: "Oswald-bold", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.header--menu__link {
+  text-decoration: none;
+  font-size: 1rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  text-align: center;
+  color: #ffce00;
+  font-family: "Oswald-bold", sans-serif;
+  transition: 0.5s;
+
+  animation: moveInTop 1s ease-out 1s;
+  animation-fill-mode: backwards;
+
+}
+
+.header--menu__link:hover {
+  color: #0d0a0b;
+}
+
+.project--btn__front {
+  text-decoration: none;
+}
+
+.project--top__left:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px #484d5c, -4px -4px 10px;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.353),
+      rgba(17, 14, 16, 0.381)),
+    url(/images/gamestry_project.jpeg);
+}
+
+.project--top__right:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px #484d5c, -4px -4px 10px;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.353),
+      rgba(17, 14, 16, 0.381)),
+    url(/images/gamestry_project.jpeg);
+}
+
+.project--bottom__left:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px #484d5c, -4px -4px 10px;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.353),
+      rgba(17, 14, 16, 0.381)),
+    url(/images/catarres_project.jpg);
+}
+
+.project--bottom__right:hover {
+  transform: scale(1.1);
+  box-shadow: 4px 4px 10px #484d5c, -4px -4px 10px;
+  background-image: linear-gradient(to right bottom,
+      rgba(9, 6, 12, 0.353),
+      rgba(17, 14, 16, 0.381)),
+    url(/images/contenteditor_project.jpg);
+}
+
+.btn--mailto {
+  text-decoration: none;
+  font-size: 5.5rem;
+  margin-left: 1.2rem;
+  margin-right: 1.2rem;
+  text-align: center;
+  color: #ffce00;
+  font-family: "Oswald-bold", sans-serif;
+  transition: 0.5s;
+  padding-left: 6.6rem;
+}
+
+/* ANIMATIONS ************* */
+
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+  }
+
+  80% {
+    opacity: 0.85;
+    transform: translateX(-1rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(5rem);
+  }
+
+  80% {
+    opacity: 0.70;
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(3rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInCenter {
+  0% {
+    opacity: 0;
+
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+@keyframes moveInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+
+  80% {
+    opacity: 0.85;
+    transform: translateY(-0.1rem);
+  }
+
+
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+
+/* animation: moveInRight 2s ease-out;
+animation: moveInBottom 1.6s ease-out .75s; */
